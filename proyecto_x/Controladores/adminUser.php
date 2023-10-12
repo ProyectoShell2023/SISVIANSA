@@ -43,12 +43,12 @@ public function getnewUser()
 }
 
 /*ELIMINAR CLIENTE*/
-public function eliminarUser($id)
-{
-    $sql = "DELETE FROM cliente WHERE ID_Ciente = ?";
-    $eliminar = $this->conex->prepare($sql);
-    $eliminar->execute([$id]);
-}
+// public function eliminarUser($id)
+// {
+//     $sql = "DELETE FROM cliente WHERE ID_Ciente = ?";
+//     $eliminar = $this->conex->prepare($sql);
+//     $eliminar->execute([$id]);
+// }
 
 }
 

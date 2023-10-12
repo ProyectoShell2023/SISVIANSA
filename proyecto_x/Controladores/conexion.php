@@ -1,31 +1,43 @@
 <?php
 
-class Conexion 
-{
-    private $host = "localhost";
-    private $user = "root";
-    private $password = "";
-    private $db = "bd_sis";
+class Conexion {
+    private $host = "localhost"; // Host de la base de datos
+    private $usuario = "root"; // Usuario de la base de datos
+    private $contrasena = ""; // Contraseña de la base de datos
+    private $baseDatos = "sisviansa"; // Nombre de la base de datos
+    private $charset = "utf8mb4"; // Conjunto de caracteres
 
-    private $con;
+    private $conexion;
 
-    function __construct(){
-        
-        $conString = "mysql:host=".$this->host.
-                ";dbname=".$this->db.";charset=utf8";
-        try{
-            $this->con = new PDO($conString,$this->user,$this->password);
-            $this->con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-        } catch(Exception $e){
-            $this->con = "Error de conexión";
-            echo "Error: ".$e->getMessage();
-        }     
+    public function __construct() {
+        try {
+            $dsn = "mysql:host={$this->host};dbname={$this->baseDatos};charset={$this->charset}";
+            $opciones = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+            $this->conexion = new PDO($dsn, $this->usuario, $this->contrasena, $opciones);
+        } catch (PDOException $e) {
+            echo "Error de conexión: " . $e->getMessage();
+            die();
+        }
     }
 
-    public function conectar(){
-        return $this->con;
+    public function conectar() {
+        return $this->conexion;
+    }
+
+    public function ejecutarConsulta($sql, $parametros = array()) {
+        try {
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute($parametros);
+            return $stmt;
+        } catch (PDOException $e) {
+            echo "Error de consulta: " . $e->getMessage();
+            return false;
+        }
+    }
+
+    public function desconectar() {
+        $this->conexion = null;
     }
 }
-
 
 ?>

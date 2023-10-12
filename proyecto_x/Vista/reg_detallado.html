@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="Styles/style_reg_detallado.css">
+    <link rel="icon" href="Recursos_reg_log/hojita.png">
+    <title>Sign up</title>
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="arrow-back">
+                <a href="../Vista/reg_log.html" class="fa-solid fa-arrow-left"></a>
+            </div> <!--arrow-back-->
+            <div class="inner-box">
+                <div class="forms-wrap">
+                    <!--Registrarce como cliente empresa-->
+                    <form action="#" autocomplete="off" class="sign-up-form" id="form_reg">
+                        <!-- <div class="logo">
+                            <img src="Recursos_reg_log/LogoVerde.png" alt="sisviansa" >
+                        </div> -->
+                        <div class="heading" >
+                            <h2>Cliente Business</h2>
+                            <h6>Quieres registrarte?</h6>
+                            <a href="#" class="toggle">Registrarce como usuario web</a>
+                        </div> <!--heading-->
+
+                        <div class="actual-form">
+                            <!--Registar: Nombre-->
+                            <div class="input-wrap">
+                                <input type="text" class="input-field" id="nombre_cb" name="nombre_cb"  autocapitalize="off"> <!--minlength="4" required-->
+                                <label for="nombre_cb">Nombre</label>
+                            </div>
+                            <!--Registrar: Email-->
+                            <div class="input-wrap">
+                                <input type="number" class="input-field" id="rut_cb" name="rut_cb" autocapitalize="off"><!--minlength="4" required-->
+                                <label for="rut_cb">Rut</label>
+
+                            </div>
+                            <!--Registrar: Contraseña-->
+                            <div class="input-wrap">
+                                <input type="number" class="input-field" id="ci_en_cb" name="ci_en_cb" autocapitalize="off"> <!--minlength="4" required-->
+                                <label for="ci_en_cb">CI encargado</label>
+                            </div>
+
+                            <input type="submit" class="sign-btn" value="Registrarce">
+                            <p class="text">Al registrarme estoy de acuerdo con los 
+                                <a href="#">Terminos y condiciones</a> an <a href="#">Politicas de privacidad</a>
+                            </p>
+                        </div> <!--actual-form-->
+                    </form>
+                    <!--Registrarce como uusario web-->
+                    <form action="#" autocomplete="off" class="sign-in-form" id="form_log">
+                        <!-- <div class="logo">
+                            <img src="Recursos_reg_log/LogoVerde.png" alt="sisviansa" >
+                        </div> -->
+                        <div class="heading" >
+                            <h2>Registrarse</h2>
+                            <h6>TIenens una empresa?</h6>
+                            <a href="#" class="toggle">Registrarce como cliente business</a>
+                        </div>
+
+                        <div class="actual-form">
+                            <!--Registrar: Nombre-->
+                            <div class="input-wrap">
+                                <input type="text" class="input-field" id="nombre_cn" name="email_log" autocapitalize="off" minlength="4" > <!--required-->
+                                <label for="nombre_cn">Nombre</label>
+                            </div>
+                            <!--Registrar : CI-->
+                            <div class="input-wrap">
+                                <input type="number" class="input-field" id="ci_cn" name="ci_cn" autocapitalize="off"  ><!--required minlength="4"-->
+                                <label for="ci_cn">CI</label>
+                            </div>
+                            <input type="submit" class="sign-btn" value="Registrarce">
+                            <p class="text">Al registrarme estoy de acuerdo con los 
+                                <a href="#">Terminos y condiciones</a> an <a href="#">Politicas de privacidad</a>
+                            </p>
+                        </div>
+                        
+                    </form>
+                </div> <!--fons-wrap-->
+
+                <!--Carousel-->
+                <div class="carousel">
+                    <center>
+                        <div class="input-wrap foto">
+                            <input type="file" id="file-input" accept="image/*" >
+                            <label for="file-input" class="file-label">Subir Foto</label>
+                        </div>
+                        <div class="preview-container">
+                            <img id="preview-image" src="../Vista/Recursos_reg_log/perfil_defolt.jpeg" alt="Vista previa de la foto" > 
+                        </div>
+                    </center>
+
+                    <div class="actual-form">
+                        <!--Registrar: Gmail-->
+                        <div class="input-wrap">
+                            <input type="email" class="input-field " id="email_cn" name="email_cn" autocapitalize="off">
+                            <label for="email_cn" class="data">Correo electronico</label>
+                        </div>
+                        <!--Registrar : contraseña-->
+                        <div class="input-wrap">
+                            <input type="password" class="input-field" id="pass01_cn" name="pass01_cn" autocapitalize="off">
+                            <label for="pass01_cn" class="data">Contraseña</label>
+                        </div>
+                        <!--Registrar : confirmacion contraseña-->
+                        <div class="input-wrap">
+                            <input type="password" class="input-field" id="pass02_cn" name="pass02_cn" autocapitalize="off"  >
+                            <label for="pass02_cn" class="data">Confirmar Contraseña</label>
+                        </div>
+                    </div>
+                </div> <!--carousel-->
+            </div> <!--inner-box-->
+        </div> <!--box-->
+    </main>
+
+    <!-- <script src="jquery-3.7.0.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/bf5cf6dca9.js" crossorigin="anonymous"></script>
+    <!-- <script src="/Controladores/Validaciones/verificador_reg_log.js" type="module"></script> -->
+    <script src="Animations/trans_reg_detallado.js"></script>
+    <script src="../Modelos/enlace.js" type="module"></script>
+</body>
+</html>
