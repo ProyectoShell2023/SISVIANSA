@@ -59,3 +59,7 @@ fileInput.addEventListener("change", function () {
         previewImage.src = "";
     }
 });
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/*Asigna los valors de la clase cliente a los input corrspondientes*/
