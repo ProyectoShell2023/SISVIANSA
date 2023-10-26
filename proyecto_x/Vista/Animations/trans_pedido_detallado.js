@@ -1,9 +1,9 @@
 const one = document.querySelector(".one");
 const two = document.querySelector(".two");
 const three = document.querySelector(".three");
-const four = document.querySelector(".four");
+const four = document.querySelector(".cuatro");
 const five = document.querySelector(".five");
-const six = document.querySelector(".six"); // Agregado para el estado 6
+const six = document.querySelector(".six"); 
 
 const select = document.getElementById("progressSelect");
 
@@ -16,7 +16,7 @@ select.addEventListener("change", function () {
     three.classList.remove("active");
     four.classList.remove("active");
     five.classList.remove("active");
-    six.classList.remove("active"); // Agregado para el estado 6
+    six.classList.remove("active"); 
 
     // Utiliza un switch para agregar la clase "active" al elemento correspondiente
     switch (selectedValue) {
