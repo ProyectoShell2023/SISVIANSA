@@ -24,7 +24,7 @@ form.addEventListener("submit", function(event) {
             if (data.success) {
                 alertify.success("Registro exitoso!");
                 // Redireccionar al usuario a la página principal
-                window.location.href = "../index.html";
+                window.location.href = "/Vista/reg_detallado.html";
             } else {
                 alertify.error(data.error);
             }

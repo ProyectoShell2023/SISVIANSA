@@ -37,27 +37,32 @@ body
 }
 
 /*FALTA CAMBIAR*/
-/* no funca - solucion: ponerlo en html
+/* no funca - solucion: ponerlo en html */
 .swiper-button-prev::after
+/* .fa-chevron-left::after */
 {
     font-size: 25px;
 }
 
-.swiper-button-prev
+/* .swiper-button-prev */
+.fa-chevron-left
 {
     color: #feffff;
+    
 }
 
 .swiper-button-next::after
+/* .fa-chevron-right::after */
 {
     font-size: 25px;
 }
 
 .swiper-button-next
+/* .fa-chevron-right */
 {
     color: #feffff;
+    /* background-color: red ; */
 }
-*/
 
 .swiper-pagination-bullet
 {
