@@ -188,3 +188,52 @@ label {
 #file-input {
     left: 10%;
 }
+
+/* Estilo base para el cuerpo de la página */
+
+@media (max-width: 768px) {
+    /* Estilo base para el cuerpo de la página */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #04652c;
+    margin: 0;
+}
+
+main.table {
+    width: 100%; /* Establece el ancho al 100% para ocupar toda la pantalla */
+    min-height: 100vh; /* Establece la altura mínima al 100% de la altura de la pantalla */
+    background-color: #cccccc;
+    box-shadow: 0 0.4rem 0.8rem #0005;
+    border-radius: 0.9rem;
+    overflow: auto;
+}
+
+
+    .column {
+        width: 100%;
+        float: none;
+        padding: 10px;
+    }
+
+    .sign-btn{
+        top: 10%
+    }
+
+    .input-field {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #7e7e7e;
+        padding: 0;
+        font-size: 0.95rem;
+        color: #04652c;
+        transition: 0.4s;
+        margin-bottom: 10px; /* Agrega un margen uniforme entre elementos de entrada */
+    }
+    
+}

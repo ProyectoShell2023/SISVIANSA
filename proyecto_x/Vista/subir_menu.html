@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,144 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles/stayle_subir_menu.css">
     <link rel="icon" href="Recursos_info_menu/hojita.png">
-    <title>Subir nuevo menu</title>
+    <!-- Alertas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs/build/css/themes/default.min.css" />
+    <title>Subir nuevo menú</title>
 </head>
 <body>
     <header>
-        <p><img src="Recursos_info_menu/LogoVerde.png" alt="logo_sis_verede"></p>
+        <p><img src="Recursos_info_menu/LogoVerde.png" alt="logo_sis_verde"></p>
     </header>
 
-    <div class="conteiner-title">Subir nuevo menu</div>
+    <div class="conteiner-title">Subir nuevo menú</div>
 
     <main>
-        <div class="container-img">
-            <input type="file" id="fileInput" accept="image/*">
-            <img id="imagePreview" src="" alt="Vista previa de la imagen">
-        </div>
-        
-
-        <div class="conteiner-info-product">
-            <div class="conteiner-price">
-                <p>
-                    <span>$</span>                    
-                    <input type="number" class="insert">
-                </p>
-                <a href="../index.html" class="fa-solid fa-xmark" h></a>
+        <form id="menuForm" enctype="multipart/form-data">
+            <div class="container-img">
+                <input type="file" name="fileInput" id="fileInput" accept="image/*">
+                <img id="imagePreview" src="" alt="Vista previa de la imagen">
             </div>
 
-            <div class="conteiner-details-product">
-                <div class="form-group">
-                    <label for="">Nombre</label>
-                    <p for="#""><input type="text" class="insert"></p>
-                </div>
-                <div class="form-group">
-                    <label for="">Tipo Menu</label> <!--MODIFICAR-->
-                    <p for="">
-                        <select name="" id="">
-                            <option value="">op 1</option>
-                            <option value="">op 2</option>
-                            <option value="">op3</option>
-                            <option value="">op4</option>
-                            <option value="">otro</option>
-                        </select>
+            <div class="conteiner-info-product">
+                <div class="conteiner-price">
+                    <p>
+                        <span>$</span>                    
+                        <input type="number" name="price" id="price" class="insert">
                     </p>
+                    <a href="../index.html" class="fa-solid fa-xmark"></a>
                 </div>
-            </div>
 
-            <div class="conteiner-add-card">
-                <button class="btn-add-to-cart" id="btn-from" type="submit">
-                    <i class="fa-solid fa-check"></i>
-                    Subir menu
-                </button>
-            </div>
+                <div class="conteiner-details-product">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" class="insert">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Tipo Menú</label>
+                        <select name="tipo" id="tipo">
+                            <option value="vegano">Vegano</option>
+                            <option value="vegetariano">Vegetariano</option>
+                            <option value="ovolácteovegetariana">Ovolácteovegetariana</option>
+                            <option value="celiaco">Celiaco</option>
+                            <option value="diabetico">Diabetico</option>
+                            <option value="menu_del_dia" selected>Menú del día</option>
+                        </select>
+                    </div>
+                </div>
 
-            <div class="conteiner-description">
-                <div class="title-description">
-                    <h4>Descripcion</h4>
+                <div class="conteiner-add-card">
+                    <button class="btn-add-to-cart" id="submitForm" type="button">
+                        <i class="fa-solid fa-check"></i> Subir menú
+                    </button>
                 </div>
-                <div class="text-description">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-            </div>
 
-            <div class="conteiner-ingredients">
-                <div class="title-ingredients">
-                    <h4>Ingredientes</h4>
+                <div class="conteiner-description">
+                    <div class="title-description">
+                        <h4>Descripción</h4>
+                    </div>
+                    <div class="text-description">
+                        <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+                    </div>
                 </div>
-                <div class="text-ingredients">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-            </div>
 
-            <div class="conteiner-additional-information">
-                <div class="title-additional-information">
-                    <h4>Informacion adicional</h4>
+                <div class="form-group">
+                    <label for="stock">Stock</label>
+                    <input type="number" name="stock" id="stock" class="insert">
                 </div>
-                <div class="text-additional-information">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <div class="form-group">
+                    <label for="stock_max">Stock Máximo</label>
+                    <input type="number" name="stock_max" id="stock_max" class="insert">
+                </div>
+
+                <div class="form-group">
+                    <label for="stock_min">Stock Mínimo</label>
+                    <input type="number" name="stock_min" id="stock_min" class="insert">
+                </div>
+
+                <div class="form-group">
+                    <label for="vencimiento">Vencimiento</label>
+                    <input type="datetime-local" name="vencimiento" id="vencimiento" class="insert">
+                </div>
+
+                <div class="form-group">
+                    <label for="tiempo">Tiempo</label>
+                    <input type="time" name="tiempo" id="tiempo" class="insert">
+                </div>
+
+                <div class="form-group">
+                    <label for="tamanio">Tamaño</label>
+                    <select name="tamanio" id="tamanio">
+                        <option value="Semanal">Semanal</option>
+                        <option value="Quincenal">Quincenal</option>
+                        <option value="Mensual">Mensual</option>
+                    </select>
                 </div>
             </div>
-        </div>
+        </form>
     </main>
 
-    <footer class="footer container">
-
-        <div class="link">
-            <h3>Preguntas frecuentes</h3>
-            <ul>
-                <li><a href="#">¿Como puedo realizar un pedio?</a></li>
-                <li><a href="#">¿Que metodos de pago haceptamos?</a></li>
-                <li><a href="#">Politica de devolucion del producto</a></li>
-                <li><a href="#">Reportar un error</a></li>
-                <li><a href="#">Reclamos</a></li>
-            </ul>
-        </div>
-        <br>
-        <div class="link">
-            <h3>Contactanos</h3>
-            <ul>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-            </ul>
-        </div>
-        <br>
-        <div class="link">
-            <h3>Contacots de Shell</h3>
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-envelope"></i>  proyctoshelliti2023@gmail.com</a></li>
-                <li><a href="https://github.com/ProyectoShell2023?tab=repositories"><i class="fa-brands fa-github"></i>  ProyectoShell2023</a></li>
-                <li><a href="#"><i class="fa-brands fa-wordpress"></i>  pepemugica.wordpress.com</a></li> <!--Agregar link y dominio-->
-                <li><a href="#"><i class="fa-brands fa-instagram"></i>  SheIICompany</a></li> <!--Agregr link-->
-            </ul>
-        </div>
-
-        <!-- <div class="link">
-            <h3>Lorem</h3>
-            <ul>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-            </ul>
-        </div>
-
-        <div class="link">
-            <h3>Lorem</h3>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Ea at sequi, neque eaque alias suscipit autem iure placeat,
-                necessitatibus illo culpa consequuntur vel excepturi non earum,
-                magni maiores beatae blanditiis.
-            </p>
-        </div> -->
-
-    </footer>
-
-
+    <script src="../jquery-3.7.0.min.js"></script>
+    <script src="../Controlador/val_menu.js"></script>
     <script src="Animations/trans_subir_menu.js"></script>
-    <!-- <script src="/Controlador/Validaciones/validacion_info_menu.js" type="module""></script> -->
     <script src="https://kit.fontawesome.com/bf5cf6dca9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs/build/alertify.min.js"></script>
 </body>
 </html>

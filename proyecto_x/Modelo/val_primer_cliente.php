@@ -1,3 +1,4 @@
+
 <?php
 
 // Importa la clase Conexion
@@ -29,7 +30,7 @@ if ($dataUser->validarCorreoExistente($email)) {
     $hashPass = password_hash($pass, PASSWORD_BCRYPT);
     
     // Agrega el cliente a la base de datos
-    if ($dataUser->agregarCliente($cel, $email, $hashPass)) {
+    if ($dataUser->agregarNewCliente($cel, $email, $hashPass)) {
         $response['success'] = true;
         $response['message'] = "Registro exitoso";
     } else {
@@ -44,3 +45,4 @@ if ($dataUser->validarCorreoExistente($email)) {
 // Devuelve la respuesta como JSON
 header('Content-Type: application/json');
 echo json_encode($response);
+

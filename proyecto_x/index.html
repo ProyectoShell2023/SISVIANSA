@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Vista/Styles/style_index.css">
+    <link rel="stylesheet" href="Vista/Styles/stayle_limitar_funcionalidades.css">
     <link rel="icon" href="Vista/Recursos_index/hojita.png">
     <!--Swiper-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
@@ -40,25 +41,6 @@
 </style>
 
 <body>
-
-    <!--Barra lateral-->
-    <!-- <div id="sidebar">
-        <div class="toggle-btn">
-            <i class="fa-solid fa-bars fa-2xl menu-icono"></i>
-
-        </div>
-        <ul>
-            <li>
-                <img src="Vista/Recursos_index/logo_shell.jpg" alt="Img user" class="img_user">
-                <p class="type_cliente">Cliente Empresa</p>
-            </li>
-            <li><a href="Vista/reg_log.html">Iniciar Sesion</a></li>
-            <li><a href="#">Proximamente...</a></li>
-            <li><a href="#">Proximamente...</a></li>
-            <li><a href="#">Proximamente...</a></li>
-        </ul>
-    </div> -->
-
     <!--Header-->
     <header class="header">
 
@@ -67,15 +49,16 @@
                 <i class="fa-solid fa-bars fa-2xl menu-icono"></i>
 
             </div>
-            <ul>
+            <ul id="menu_desplegable">
                 <li>
                     <img src="Vista/Recursos_index/logo_shell.jpg" alt="Img user" class="img_user">
                     <p class="type_cliente">Cliente Empresa</p>
                 </li>
                 <li><a href="Vista/reg_log.html">Iniciar Sesion</a></li>
+                <li><a href="#">Cerrar Sesion</a></li>
                 <li><a href="Vista/estado_pedido.html">Pedidios</a></li>
-                <li><a href="Vista/actualizar_datos_cliente.html"><center>Actualizar Datos</center></a></li>
-                <li><a href="#">Proximamente...</a></li>
+                <li><a href="Vista/actualizar_datos_cliente.html">Actualizar Datos</a></li>
+                <li><a href="Vista/subir_menu.html">Subir Menu</a></li>
             </ul>
         </div>
 
@@ -83,8 +66,6 @@
             <div class="logo">
                 <img src="Vista/Recursos_index/LogoVerde.png" alt="sisviansa" >
             </div>
-
-
 
             <!-- <input type="checkbox" id="menu">
             <label for="menu"><i class="fa-solid fa-bars fa-xl menu-icono"></i></label>
@@ -101,9 +82,9 @@
                 <ul>
                     <li class="submenu">
                         <i class="fa-solid fa-cart-shopping fa-xl"></i>
-                        <!-- <img src="Vista/Recursos_index/car.svg" id="img-carrito">  -->
-                            <div id="carrito">
-                            <table id="lista-carrito" >
+                            <!-- <img src="Vista/Recursos_index/car.svg" id="img-carrito">-->
+                        <div id="carrito">
+                            <table id="lista-carrito">
                                 <thead>
                                     <tr>
                                         <th></th>
@@ -114,7 +95,7 @@
                                 </thead>
                                 <tbody></tbody>
                             </table>
-                            <a href="#" id="ver-detalles" class="btn-3">Ver detalles</a>
+                            <a href="Vista/hacer_pedido.html" class="btn-3">Hacer pedido</a>
                         </div>
                     </li>
                 </ul>
@@ -263,7 +244,7 @@
 
     <!--Section Productos Nuevos-->
     <section class="products container" id="lista-2">
-        <h2>Menus Peruanos</h2>
+        <h2>Menu del dia</h2>
 
         <div class="swiper mySwiper-2">
             <div class="swiper-wrapper">
@@ -272,8 +253,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Peruano</p>
+                            <h3>Sabor y variedad</h3>
+                            <p>Menu del dia</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al carrito</a>
                         </div>
@@ -284,8 +265,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Peruano</p>
+                            <h3>Para todos los gustos</h3>
+                            <p>Menu del dia</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar al carrito</a>
                         </div>
@@ -296,8 +277,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Peruano</p>
+                            <h3>La cocina del día</h3>
+                            <p>Menu del dia</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar al carrito</a>
                         </div>
@@ -308,8 +289,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Peruano</p>
+                            <h3>La cocina del hogar</h3>
+                            <p>Menu del dia</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar al carrito</a>
                         </div>
@@ -337,7 +318,7 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
+                            <h3>Sabor y salud</h3>
                             <p>Menu Vegano</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar al carrito</a>
@@ -349,7 +330,7 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
+                            <h3>Naturaleza en tu plato</h3>
                             <p>Menu Vegano</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar al carrito</a>
@@ -361,7 +342,7 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
+                            <h3>Vida sin crueldad</h3>
                             <p>Menu Vegano</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="11">Agregar al carrito</a>
@@ -373,7 +354,7 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
+                            <h3>Tierra y amor</h3>
                             <p>Menu Vegano</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="12">Agregar al carrito</a>
@@ -393,7 +374,7 @@
 
     <!--Secton Productos Carnivoros-->
     <section class="products container" id="lista-3">
-        <h2>Menus Carnivoros</h2>
+        <h2>Menus vegetariano</h2>
 
         <div class="swiper mySwiper-2">
             <div class="swiper-wrapper">
@@ -402,8 +383,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Vegano</p>
+                            <h3>La tierra en tu mesa</h3>
+                            <p>Menu vegetariano</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar al carrito</a>
                         </div>
@@ -414,8 +395,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Vegano</p>
+                            <h3>Sabor y nutrición</h3>
+                            <p>Menu vegetariano</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar al carrito</a>
                         </div>
@@ -426,8 +407,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Vegano</p>
+                            <h3>Verduras y más verduras</h3>
+                            <p>Menu vegetariano</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="11">Agregar al carrito</a>
                         </div>
@@ -438,8 +419,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Vegano</p>
+                            <h3>La naturaleza en tu plato</h3>
+                            <p>Menu vegetariano</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="12">Agregar al carrito</a>
                         </div>
@@ -467,8 +448,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Vegano</p>
+                            <h3>Sabor sin gluten</h3>
+                            <p>Menu celiaco</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar al carrito</a>
                         </div>
@@ -479,8 +460,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Vegano</p>
+                            <h3>Alimentación sin límites</h3>
+                            <p>Menu celiaco</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar al carrito</a>
                         </div>
@@ -491,8 +472,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Vegano</p>
+                            <h3>La variedad sin gluten</h3>
+                            <p>Menu celiaco</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="11">Agregar al carrito</a>
                         </div>
@@ -503,8 +484,8 @@
                     <div class="product">
                         <img src="Vista/Recursos_index/mila-sin-fondo.png" alt="">
                         <div class="product-txt">
-                            <h3>Cositas</h3>
-                            <p>Menu Vegano</p>
+                            <h3>La cocina sin fronteras</h3>
+                            <p>Menu celiaco</p>
                             <p class="precio">$567</p>
                             <a href="#" class="agregar-carrito btn-3" data-id="12">Agregar al carrito</a>
                         </div>
@@ -581,7 +562,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!--Fontawesame-->
     <script src="https://kit.fontawesome.com/bf5cf6dca9.js" crossorigin="anonymous"></script>
-    <script src="Vista/Animations/trans_index.js"></script>
+    <!--Otros-->
+    <script type="module" src="Vista/Animations/trans_index.js"></script>
+    <script src="Controlador/limitar_funcionalidades.js"></script>
+    <script type="module" src="Controlador/val_pedidos.js"></script>
 
 </body>
 </html>

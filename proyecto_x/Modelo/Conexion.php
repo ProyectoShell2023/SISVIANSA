@@ -5,9 +5,9 @@
  */
 class Conexion {
     const DB_HOST = 'localhost';
-    const DB_USER = 'root';
-    const DB_PASSWORD = '';
-    const DB_NAME = 'sisviansa';
+    const DB_USER = 'id21414079_shell_root';
+    const DB_PASSWORD = '0He8@YKq~6^r';
+    const DB_NAME = 'id21414079_shell_sisviansa';
 
     private static $instancia;
     private $pdo;

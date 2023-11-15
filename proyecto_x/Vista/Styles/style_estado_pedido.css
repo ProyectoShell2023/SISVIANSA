@@ -17,7 +17,8 @@ body {
 }
 
 table {
-    width: 100%;
+    border-collapse: separate; /* Evita la superposición de filas */
+    border-spacing: 0 2px; /* Espaciado vertical entre filas */
 }
 
 main.table {
@@ -69,10 +70,16 @@ table, th, td {
     text-align: center ;
 }
 
+/* tr th
+{
+    text-align: left;
+} */
+
 thead th {
     position: sticky;
     top: 0;
-    left: 0;
+    background-color: #cccccc; /* Fondo del encabezado */
+    z-index: 1; /* Asegura que el encabezado esté sobre las filas */
 }
 
 tbody tr:nth-child(even) {
@@ -93,4 +100,28 @@ tbody tr:hover {
     font-size: 24px;
     text-decoration: none;
     color: #151111 ;
+}
+
+tr th.orden{
+    width: 10%;
+}
+
+tr th.fecha{
+    width: 5%;
+}
+
+tr th.destinatario{
+    width: 30%;
+}
+
+tr th.total{
+    width: 10%;
+}
+
+tr th.estado{
+    width: 20%;
+}
+
+tr th.mas{
+    width: 25%;
 }

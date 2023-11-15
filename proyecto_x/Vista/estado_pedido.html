@@ -21,41 +21,32 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Orden #</th>
-                        <th>Fecha</th>
-                        <th>Enviar a</th>
-                        <th>Total a Pagar</th>
-                        <th>Estado de la Orden</th>
-                        <th> Mas Destalles </th>
+                        <th class="orden">Orden #</th>
+                        <th class="fecha">Fecha</th>
+                        <th class="destinatario">Enviar a</th>
+                        <th class="total">Total a Pagar</th>
+                        <th class="estado">Estado de la Orden</th>
+                        <th class="mas"> Mas Destalles </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr id="fila-ejemplo">
+                        <td id="id-pedido"></td>
+                        <td id="fecha-pedido"></td>
+                        <td id="destinatario"></td>
+                        <td id="total-pedido"></td>
+                        <td id="estado-pedido"></td>
+                        <td><a href="#">Redireccionamiento</a></td>
+                    </tr>
+                    
+                    <!-- <tr>
                         <td>cosas</td>
                         <td>cosas</td>
                         <td>cosas</td>
                         <td><strong>cosas</strong></td>
                         <td>cosas</td>
                         <td><a href="#">Redireccionamiento cosas</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>cosas</td>
-                        <td>cosas</td>
-                        <td>cosas</td>
-                        <td><strong>cosas</strong></td>
-                        <td>cosas</td>
-                        <td><a href="#">Redireccionamiento cosas</a></td>
-                    </tr>
-                
-                    <tr>
-                        <td>cosas</td>
-                        <td>cosas</td>
-                        <td>cosas</td>
-                        <td><strong>cosas</strong></td>
-                        <td>cosas</td>
-                        <td><a href="#">Redireccionamiento cosas</a></td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </section>
@@ -65,7 +56,7 @@
 
 
 
-<script src=""></script>
+<script src="../Controlador/ver_pedidos.js"></script>
 <script src="https://kit.fontawesome.com/bf5cf6dca9.js" crossorigin="anonymous"></script>
 </body>
 </html>

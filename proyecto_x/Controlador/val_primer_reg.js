@@ -21,24 +21,28 @@ form.addEventListener("submit", function(event) {
     })
         .then(response => response.json())
         .then(data => {
+
+            
             if (data.success) {
                 alertify.success("Registro exitoso!");
                 // Redireccionar al usuario a la página principal
-                window.location.href = "/Vista/reg_detallado.html";
+                window.location.href = "../index.html";
             } else {
                 alertify.error(data.error);
             }
         });
 });
 
+
+
 // Función para validar los datos del formulario
 function validarFormulario() {
     // Validar el número de celular
     let cel = document.getElementById("cel_reg").value;
-    cel = cel.trim();
+   cel = cel.trim();
     if (cel.length !== 9) {
         alertify.error("El número de celular debe tener 9 dígitos");
-        return false;
+        return false; 
     }
 
     // Validar el correo electrónico

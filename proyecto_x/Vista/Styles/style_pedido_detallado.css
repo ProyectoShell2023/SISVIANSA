@@ -405,6 +405,22 @@ div .table_header h2
     .column.c2 ul li .icon {
         margin: 15px 0;
     }
+
+    .column.c1 table .importe{
+    /* background: red; */
+    width: 90%;
+    text-align: left;
+}
+
+.column.c1 table .costo{
+    /* background: red; */
+    width: 10%;
+}
+
+.column.c1 table {
+    width: 100%; /* Establece el ancho de la tabla al 100% de la columna .c1 */
+}
+
 }
 
 @media (max-width: 600px) {
