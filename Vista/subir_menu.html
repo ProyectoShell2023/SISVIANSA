@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/stayle_subir_menu.css">
+    <link rel="icon" href="Recursos_info_menu/hojita.png">
+    <!-- Alertas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs/build/css/themes/default.min.css" />
+    <title>Subir nuevo menú</title>
+</head>
+<body>
+    <header>
+        <p><img src="Recursos_info_menu/LogoVerde.png" alt="logo_sis_verde"></p>
+    </header>
+
+    <div class="conteiner-title">Subir nuevo menú</div>
+
+    <main>
+        <form id="menuForm" enctype="multipart/form-data">
+            <div class="container-img">
+                <input type="file" name="fileInput" id="fileInput" accept="image/*">
+                <img id="imagePreview" src="" alt="Vista previa de la imagen">
+            </div>
+
+            <div class="conteiner-info-product">
+                <div class="conteiner-price">
+                    <p>
+                        <span>$</span>                    
+                        <input type="number" name="price" id="price" class="insert">
+                    </p>
+                    <a href="../index.html" class="fa-solid fa-xmark"></a>
+                </div>
+
+                <div class="conteiner-details-product">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" class="insert">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Tipo Menú</label>
+                        <select name="tipo" id="tipo">
+                            <option value="vegano">Vegano</option>
+                            <option value="vegetariano">Vegetariano</option>
+                            <option value="ovolácteovegetariana">Ovolácteovegetariana</option>
+                            <option value="celiaco">Celiaco</option>
+                            <option value="diabetico">Diabetico</option>
+                            <option value="menu_del_dia" selected>Menú del día</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="conteiner-add-card">
+                    <button class="btn-add-to-cart" id="submitForm" type="button">
+                        <i class="fa-solid fa-check"></i> Subir menú
+                    </button>
+                </div>
+
+                <div class="conteiner-description">
+                    <div class="title-description">
+                        <h4>Descripción</h4>
+                    </div>
+                    <div class="text-description">
+                        <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="stock">Stock</label>
+                    <input type="number" name="stock" id="stock" class="insert">
+                </div>
+
+                <div class="form-group">
+                    <label for="stock_max">Stock Máximo</label>
+                    <input type="number" name="stock_max" id="stock_max" class="insert">
+                </div>
+
+                <div class="form-group">
+                    <label for="stock_min">Stock Mínimo</label>
+                    <input type="number" name="stock_min" id="stock_min" class="insert">
+                </div>
+
+                <div class="form-group">
+                    <label for="vencimiento">Vencimiento</label>
+                    <input type="datetime-local" name="vencimiento" id="vencimiento" class="insert">
+                </div>
+
+                <div class="form-group">
+                    <label for="tiempo">Tiempo</label>
+                    <input type="time" name="tiempo" id="tiempo" class="insert">
+                </div>
+
+                <div class="form-group">
+                    <label for="tamanio">Tamaño</label>
+                    <select name="tamanio" id="tamanio">
+                        <option value="Semanal">Semanal</option>
+                        <option value="Quincenal">Quincenal</option>
+                        <option value="Mensual">Mensual</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="../jquery-3.7.0.min.js"></script>
+    <script src="../Controlador/val_menu.js"></script>
+    <script src="Animations/trans_subir_menu.js"></script>
+    <script src="https://kit.fontawesome.com/bf5cf6dca9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs/build/alertify.min.js"></script>
+</body>
+</html>

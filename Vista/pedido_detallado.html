@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style_pedido_detallado.css">  
+    <link rel="icon" href="Recursos_index/hojita.png">
+    <!-- UniIcon CDN Link  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Ver pedido</title>
+</head>
+<body>
+
+    <div class="arrow-back">
+        <a href="/Vista/estado_pedido.html" class="fa-solid fa-arrow-left"></a>
+    </div>
+
+    <main class="table">
+        <section class="table_header">
+            <h1>Mi pedido</h1>
+        </section> 
+
+        <section class="column c1">
+            <div class="inline-elements">
+                <h2>Orden: </h2>
+                <p class="twe">#Num_Pedido</p>
+            </div>
+
+            <div class="inline-elements">
+                <h4>Cliente: </h4>
+                <p class="four">Nombre_cliente</p>
+            </div>
+
+            <div class="inline-elements cliente">
+                <h4>Fecha de compra: </h4>
+                <p class="four">Fecha</p>
+            </div>
+
+            <!-- <div class="inline-elements cliente">
+                <h4>Metodo de envio: </h4>
+                <p class="four">---</p>
+            </div> -->
+            
+            <div class="inline-elements cliente">
+                <h4>Direccion de envio </h4>
+                <p class="four">Direccion</p>
+            </div>
+
+            <div class="inline-elements cliente">
+                <h3>Total a pagar </h3>
+                <p class="tree">TOTAL</p>
+            </div>
+
+            <div>
+                <section class="table_header productos">
+                    <h2>Datos Productos: </h2>
+                </section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="menu">Menu</th>
+                            <th class="cantidad">Cantidad</th>
+                            <th class="precio_uni">Precio uni</th>
+                            <th class="precio">Precio total</th>
+                            <th class="tipo_menu">Tipo Menu</th>
+                            <th class="redireccion"> --- </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="menu">cosas</td>
+                            <td class="cantidad">cosas</td>
+                            <td class="precio_uni">cosas</td>
+                            <td class="precio"><strong>cosas</strong></td>
+                            <td class="tipo_menu">cosas</td>
+                            <td class="redireccion"><a href="#">Redireccionamiento al menu</a></td>
+                        </tr>
+    
+                        <tr>
+                            <td class="menu">cosas</td>
+                            <td class="cantidad">cosa</td>
+                            <td class="precio_uni">cosa</td>
+                            <td class="precio"><strong>cosas</strong></td>
+                            <td class="tipo_menu">cosas</td>
+                            <td class="redireccion"><a href="#">Redireccionamiento al menu</a></td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="menu">cosas</td>
+                            <td class="cantidad">cosas</td>
+                            <td class="precio_uni">cosas</td>
+                            <td class="precio"><strong>cosas</strong></td>
+                            <td class="tipo_menu">cosas</td>
+                            <td class="redireccion"><a href="#">Redireccionamiento al menu</a></td>
+                        </tr>
+
+                        <tr>
+                            <td class="menu">cosas</td>
+                            <td class="cantidad">cosas</td>
+                            <td class="precio_uni">cosas</td>
+                            <td class="precio"><strong>cosas</strong></td>
+                            <td class="tipo_menu">cosas</td>
+                            <td class="redireccion"><a href="#">Redireccionamiento al menu</a></td>
+                        </tr>
+
+                        <tr>
+                            <td class="menu">cosas</td>
+                            <td class="cantidad">cosas</td>
+                            <td class="precio_uni">cosas</td>
+                            <td class="precio"><strong>cosas</strong></td>
+                            <td class="tipo_menu">cosas</td>
+                            <td class="redireccion"><a href="#">Redireccionamiento al menu</a></td>
+                        </tr>
+
+                        <tr>
+                            <td class="menu">cosas</td>
+                            <td class="cantidad">cosas</td>
+                            <td class="precio_uni">cosas</td>
+                            <td class="precio"><strong>cosas</strong></td>
+                            <td class="tipo_menu">cosas</td>
+                            <td class="redireccion"><a href="#">Redireccionamiento al menu</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <br>
+            <hr>    
+
+            <div>
+                <section class="table_header factura">
+                    <h2>Detalles de la factura: </h2>
+                </section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="importe">Tipo de importe</th>
+                            <th class="costo">----</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="importe">Menus</td>
+                            <td>$$</td>
+                        </tr>
+    
+                        <tr>
+                            <td class="importe">Envio</td>
+                            <td>$$</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="importe">Descuento</td>
+                            <td>$$</td>
+                        </tr>
+
+                        <tr>
+                            <td class="importe">Descuetos 2</td>
+                            <td>$$</td>
+                        </tr>
+
+                        <tr>
+                            <td class="importe">Menus Custom</td>
+                            <td >$$</td>
+                        </tr>
+
+                        <tr>
+                            <td class="importe">cosas</td>
+                            <td>$$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </section>
+        <section class="column c2">
+            <div class="main">        
+                <ul>
+                    <li class="hidden">
+                        <!-- <i class="icon uil uil-capture"></i> -->
+                        <div class="progress one">
+                            <p>1</p>
+                            <!-- <i class="uil uil-check"></i> -->
+                        </div>
+                        <p class="text">Solicitada</p>
+                    </li>
+
+                    <li>
+                        <!-- <i class="icon uil uil-clipboard-notes"></i> -->
+                        <div class="progress two">
+                            <p>2</p>
+                            <!-- <i class="uil uil-check"></i> -->
+                        </div>
+                        <p class="text">En Stock</p>
+                    </li>
+
+                    <li>
+                        <!-- <i class="icon uil uil-credit-card"></i> -->
+                        <div class="progress three">
+                            <p>3</p>
+                            <!-- <i class="uil uil-check"></i> -->
+                        </div>
+                        <p class="text">En Producciónt</p>
+                    </li>
+
+                    <li>
+                        <div class="progress cuatro">
+                            <p>4</p>
+                        </div>
+                        <p class="text">Envasado</p>
+                    </li>                                       
+
+                    <li>
+                        <!-- <i class="icon uil uil-map-marker"></i> -->
+                        <div class="progress five">
+                            <p>5</p>
+                        </div>
+                        <p class="text">Entregada</p>
+                    </li>
+                    
+                    <li>
+                        <div class="progress six">
+                            <p>6</p>
+                        </div>
+                        <p class="text">Devuelta</p>
+                    </li>                    
+                </ul>
+                
+            </div>
+        
+            <select id="progressSelect">
+                <option value="1">Step 1</option>
+                <option value="2">Step 2</option>
+                <option value="3">Step 3</option>
+                <option value="4">Step 4</option>
+                <option value="5">Step 5</option>
+                <option value="6">Step 6</option>
+            </select>
+        </section>
+    </main>
+
+<!-- <script src="/jquery-3.7.0.min.js"></script> -->
+<script src="/Vista/Animations/trans_pedido_detallado.js"></script>
+<script src="https://kit.fontawesome.com/bf5cf6dca9.js" crossorigin="anonymous"></script>
+</body>
+</html>

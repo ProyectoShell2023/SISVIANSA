@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #04652c;
+    margin: 0;
+}
+
+main.table {
+    width: 82vw;
+    height: 90vh;
+    background-color: #cccccc;
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .9rem;
+    overflow: auto;
+}
+
+main.table::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+.table_header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table_header h1 {
+    margin-bottom: 0;
+    font-size: 40px;
+}
+
+.table_body {
+    width: 100%;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+
+.table_body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #04652c;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+.arrow-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.arrow-back a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #151111;
+}
+
+/* Revisar */
+
+.column {
+    /* width: 50%; Divide el ancho en dos partes iguales para dos columnas */
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.column.c1
+{
+    /* background: red; */
+    width: 75%;
+    height: auto;
+}
+
+.inline-elements h2, .inline-elements h4, .inline-elements h3, .inline-elements p {
+    display: inline-block;
+    margin: 0;
+}
+
+.column.c1 .inline-elements h2
+{
+    font-size: 30px;
+}
+
+.column.c1 .inline-elements h3
+{
+    font-size: 25px;
+}
+
+.column.c1 .inline-elements h4
+{
+    font-size: 20px;
+}
+
+.column.c1 .inline-elements .twe
+{
+    font-size: 29px;
+}
+
+.column.c1 .inline-elements .tree
+{
+    font-size: 24px;
+}
+
+.column.c1 .inline-elements .four
+{
+    font-size: 19px;
+}
+
+.data_cliente h2 p 
+{
+    /* background: red; */
+    font-size: 15px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table, th, td {
+    padding: 1rem;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #cccccc; /* Color de fondo de las cabeceras */
+    z-index: 1; /* Asegura que las cabeceras estén por encima del contenido */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #b5b5b5;
+}
+
+/* div .table_header
+{
+    padding: 10px;
+}
+*/
+div .table_header h2 
+{
+    /* background: red;  */
+    width: 100%;
+    padding: 30px 0 0 0;
+} 
+
+.column.c1 table {
+    width: 100%;
+}
+
+.column.c1 table .menu {
+    /* background: red; */
+    width: 40%;
+}
+
+.column.c1 table .cantidad {
+    /* background: red; */
+    width: 2%;
+}
+
+.column.c1 table .precio_uni {
+    /* background: red; */
+    width: 2%;
+}
+
+.column.c1 table .precio {
+    /* background: red; */
+    width: 2%;
+}
+
+.column.c1 table .tipo_menu {
+    /* background: red; */
+    width: 15%;
+}
+
+.column.c1 table .redireccion{
+    /* background: red; */
+    width: 29%;
+}
+
+.column.c1 table .redireccion a{
+    /* background: red; */
+    color: #151111;
+    text-decoration: none;
+}
+
+.column.c1 table .redireccion a:hover{
+    /* background: red; */
+    color: #34b43c;
+}
+
+.column.c1 table .importe{
+    /* background: red; */
+    width: 90%;
+    text-align: left;
+}
+
+.column.c1 table .costo{
+    /* background: red; */
+    width: 10%;
+}
+
+.table_body {
+    width: 100%;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow-y: scroll; /* Agregar barra de desplazamiento vertical */
+    max-height: 400px; /* Establecer una altura máxima para que la barra de desplazamiento aparezca cuando el contenido sea demasiado largo */
+}
+
+.column.c2 {
+    /* background: rebeccapurple; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex; /* Cambia a display: flex para centrar verticalmente los elementos internos */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 0 5%;
+}
+
+@font-face {
+    font-family: pop;
+    src: url(./Fonts/Poppins-Medium.ttf);
+}
+
+.column.c2.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: pop;
+    flex-direction: column; /* Cambia la dirección principal a column */
+}
+
+.column.c2.head {
+    text-align: center;
+}
+
+.column.c2.head_1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #f60000;
+}
+
+.column.c2.head_1 span {
+    color: #ff0000;
+}
+
+.column.c2.head_2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff0000;
+    margin-top: 3px;
+}
+
+.column.c2 ul {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de la barra de progreso a vertical */
+    margin-top: 80px;
+}
+
+.column.c2 ul li {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+    margin: 20px 0; /* Agrega un margen vertical entre los pasos */
+    position: relative; /* Añade posición relativa para que los elementos ::before sean posicionados correctamente */
+}
+
+.column.c2 ul li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px; /* Espacio de la línea */
+    background-color: #04652c; /* Color de la línea */
+    bottom: -10px; /* Ajusta la posición vertical de la línea */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -10; /* Coloca la línea detrás del contenido */
+}
+
+/* .column.c2 ul li.hidden {
+    display: none; 
+}
+*/
+
+.column.c2 div.progress.one::after {
+    display: none; /* Oculta el pseudo-elemento ::before del primer nodo */
+}
+
+
+
+.column.c2 ul li .icon {
+    font-size: 35px;
+    color: #151f19;
+    margin: 0 60px;
+    position: relative; /* Añade posición relativa para que los nodos estén en una capa superior */
+    z-index: 1; /* Asegura que los nodos estén por encima de la línea */
+}
+
+/* Progress Div Css */
+.column.c2 ul li .progress {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(68, 68, 68, 0.781);
+    margin: 14px 10px 14px 0; /* Agrega margen a la derecha para separar la burbuja del texto */
+    display: grid;
+    place-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.column.c2 ul li .progress::after {
+    content: " ";
+    position: absolute;
+    width: 5px; /* Ancho vertical */
+    height: 68.999px; /* Altura horizontal */
+    background-color: rgba(68, 68, 68, 0.781);
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) ;
+}
+
+.column.c2 ul li .progress .uil {
+    display: none ;
+}
+
+.column.c2 ul li .progress p {
+    font-size: 13px;
+}
+
+.column.c2 ul li .active {
+    background-color: #04652c;
+    display: grid;
+    place-items: center;
+}
+
+.column.c2 ul li .actual {
+    background-color: #04652c;
+    display: grid;
+    place-items: center;
+}
+
+
+
+.column.c2 ul li .active::after {
+    background-color: #04652c ;
+}
+
+.column.c2 ul li .active p {
+    display: none ;
+}
+
+.column.c2 ul li .active .uil {
+    font-size: 20px;
+    display: flex;
+}
+
+
+/* Responsive Css */
+
+@media (max-width: 980px) {
+    .column.c2 ul {
+        flex-direction: column;
+    }
+    .column.c2 ul li {
+        flex-direction: row;
+    }
+    .column.c2 ul li .progress {
+        margin: 0 30px;
+    }
+    .column.c2 ul li::before {
+        height: 0;
+    }
+    .column.c2 ul li .icon {
+        margin: 15px 0;
+    }
+
+    .column.c1 table .importe{
+    /* background: red; */
+    width: 90%;
+    text-align: left;
+}
+
+.column.c1 table .costo{
+    /* background: red; */
+    width: 10%;
+}
+
+.column.c1 table {
+    width: 100%; /* Establece el ancho de la tabla al 100% de la columna .c1 */
+}
+
+}
+
+@media (max-width: 600px) {
+    .column.c2.head .head_1 {
+        font-size: 24px;
+    }
+    .column.c2.head .head_2 {
+        font-size: 16px;
+    }
+}
+
+/*--*/
+
+hr
+{
+    border: 0.4px dashed #04652c; 
+}

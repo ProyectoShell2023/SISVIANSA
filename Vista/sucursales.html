@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de sucursal</title>
+</head>
+<body>
+  <h1>Formulario de sucursal</h1>
+  <form action="insertar.php" method="post">
+    <fieldset>
+      <legend>Datos de la sucursal</legend>
+      <label for="Cant_Cocina">Cantidad de cocinas</label>
+      <input type="number" name="Cant_Cocina" id="Cant_Cocina" placeholder="Cantidad de cocinas" min="1">
+      <label for="Cant_Turnos">Cantidad de turnos</label>
+      <select name="Cant_Turnos" id="Cant_Turnos">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </fieldset>
+    <input type="submit" value="Insertar">
+  </form>
+
+  <script>
+    function enviarFormulario() {
+      // Obtener los datos del formulario
+      var cantidadCocina = document.getElementById("Cant_Cocina").value;
+      var cantidadTurnos = document.getElementById("Cant_Turnos").value;
+
+      // Enviar los datos a PHP
+      var datos = {
+        "Cant_Cocina": cantidadCocina,
+        "Cant_Turnos": cantidadTurnos
+      };
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "insertar.php", true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.send(JSON.stringify(datos));
+
+      // Redirigir a la página de resultados
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          window.location.href = "resultados.php";
+        } else {
+          alert("Error al enviar los datos");
+        }
+      };
+    }
+
+    // Evento de click del botón de envío
+    document.getElementById("submit").addEventListener("click", enviarFormulario);
+  </script>
+</body>
+</html>

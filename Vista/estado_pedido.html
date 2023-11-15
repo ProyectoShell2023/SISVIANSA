@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style_estado_pedido.css">  
+    <link rel="icon" href="Recursos_index/hojita.png">
+    <title>Mis pedido</title>
+</head>
+<body>
+    <div class="arrow-back">
+        <a href="../index.html" class="fa-solid fa-arrow-left"></a>
+    </div>
+    <main class="table">
+        <section class="table_header">
+            <h1>Mis Pedidos</h1>
+        </section>
+        
+        <section class="table_body">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="orden">Orden #</th>
+                        <th class="fecha">Fecha</th>
+                        <th class="destinatario">Enviar a</th>
+                        <th class="total">Total a Pagar</th>
+                        <th class="estado">Estado de la Orden</th>
+                        <th class="mas"> Mas Destalles </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="fila-ejemplo">
+                        <td id="id-pedido"></td>
+                        <td id="fecha-pedido"></td>
+                        <td id="destinatario"></td>
+                        <td id="total-pedido"></td>
+                        <td id="estado-pedido"></td>
+                        <td><a href="#">Redireccionamiento</a></td>
+                    </tr>
+                    
+                    <!-- <tr>
+                        <td>cosas</td>
+                        <td>cosas</td>
+                        <td>cosas</td>
+                        <td><strong>cosas</strong></td>
+                        <td>cosas</td>
+                        <td><a href="#">Redireccionamiento cosas</a></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+
+
+
+<script src="../Controlador/ver_pedidos.js"></script>
+<script src="https://kit.fontawesome.com/bf5cf6dca9.js" crossorigin="anonymous"></script>
+</body>
+</html>

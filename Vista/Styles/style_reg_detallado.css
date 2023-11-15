@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #04652c;
+    margin: 0;
+}
+
+main.table {
+    width: 40%; /* Puedes ajustar este valor según sea necesario */
+    min-height: 80vh;
+    background-color: #cccccc;
+    box-shadow: 0 0.4rem 0.8rem #0005;
+    border-radius: 0.9rem;
+    overflow: auto;
+    margin: auto; /* Agregamos este estilo para centrar el contenedor */
+}
+main.table::-webkit-scrollbar {
+    width: 10px;
+}
+
+.table_header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table_header h1 {
+    font-size: 2rem;
+}
+
+.column {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* .column.c1 {
+    background-color: #f0f0f0;
+} */
+
+.column.c2 {
+    /* background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0; Elimina el padding para usar todo el ancho disponible */
+    padding-top: 5% ;
+}
+
+.actual-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; /* Puedes ajustar este valor según sea necesario */
+}
+
+.input-wrap {
+    width: 100%;
+    max-width: 300px; /* Ajusta el valor según sea necesario */
+    margin-bottom: 15px; /* Puedes ajustar este valor según sea necesario */
+}
+
+
+.input-wrap {
+    position: relative;
+    height: 3rem;
+}
+
+.input-field {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #7e7e7e;
+    padding: 0;
+    font-size: 0.95rem;
+    color: #04652c;
+    transition: 0.4s;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.95rem;
+    color: #7e7e7e;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.input-field.active {
+    border-bottom-color: #151111;
+}
+
+.input-field.active + label {
+    font-size: 0.75rem;
+    top: -2px;
+}
+
+.sign-btn {
+    display: inline-block;
+    width: 100%;
+    height: 43px;
+    background-color: #04652c;
+    color: #cccccc;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.3s;
+
+    position: relative ;
+    /* top: 375px ; */
+}
+
+.sign-btn:hover {
+    background-color: #34b43c;
+}
+
+.text {
+    color: #432424;
+    font-size: 0.7rem;
+}
+
+.text a {
+    color: #7e7e7e;
+    transition: 0.3s;
+}
+
+.text a:hover {
+    color: #34b43c;
+}
+
+.arrow-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.arrow-back a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #151111;
+}
+
+.preview-container {
+    margin-top: 20px;
+    padding-top: 60px;
+}
+
+#preview-image {
+    max-width: 100%;
+    max-height: 200px;
+    border: 1px solid #000000;
+    border-radius: 100px;
+}
+
+.file-label {
+    display: inline-block ;
+    width: 100%;
+    height: 43px;
+    background-color: #04652c ;
+    color: #cccccc ;
+    border: none;
+    cursor: pointer ;
+    border-radius: 0.8rem;
+    font-size: 0.9rem;
+    text-align: center; 
+    line-height: 43px; 
+    margin-bottom: 0.3s;
+}
+
+
+.file-label:hover {
+    background-color: #34b43c ;
+}
+
+#file-input {
+    left: 20%;
+}
+
+/* Estilo base para el cuerpo de la página */
+
+@media (max-width: 789px) and ((min-width: 0px)) {
+    /* Estilo base para el cuerpo de la página */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #04652c;
+    margin: 0;
+}
+
+main.table {
+    width: 100%; /* Puedes ajustar este valor según sea necesario */
+    height: 100vh;
+    background-color: #cccccc ;
+    box-shadow: 0 0.4rem 0.8rem #0005;
+    border-radius: 0.9rem;
+    overflow: auto;
+    margin: auto; /* Agregamos este estilo para centrar el contenedor */
+}
+
+    .column {
+        width: 100%;
+        float: none;
+        padding: 10px;
+    }
+
+    .sign-btn{
+        top: 10%
+    }
+
+    .input-field {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #7e7e7e;
+        padding: 0;
+        font-size: 0.95rem;
+        color: #04652c;
+        transition: 0.4s;
+        margin-bottom: 10px; /* Agrega un margen uniforme entre elementos de entrada */
+    }
+    
+}
+
+@media (min-width:790px) and (max-width: 940px) 
+{
+    main.table {
+        width: 60%; /* Puedes ajustar este valor según sea necesario */
+        min-height: 80vh;
+        background-color: #cccccc;
+        box-shadow: 0 0.4rem 0.8rem #0005;
+        border-radius: 0.9rem;
+        overflow: auto;
+        margin: auto; /* Agregamos este estilo para centrar el contenedor */
+}
+
+}

@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #04652c;
+    margin: 0; /* Eliminar el margen por defecto */
+}
+
+table {
+    border-collapse: separate; /* Evita la superposición de filas */
+    border-spacing: 0 2px; /* Espaciado vertical entre filas */
+}
+
+main.table {
+    width: 82vw;
+    height: 90vh;
+    background-color: #cccccc;
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .9rem;
+    overflow: hidden;
+}
+
+.table_header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.table_header h1 {
+    margin-bottom: 0; 
+}
+
+.table_body {
+    width: 100%;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+
+.table_body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #04652c;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+table, th, td {
+    padding: 1rem;
+    border-collapse: collapse;
+    text-align: center ;
+}
+
+/* tr th
+{
+    text-align: left;
+} */
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #cccccc; /* Fondo del encabezado */
+    z-index: 1; /* Asegura que el encabezado esté sobre las filas */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #b5b5b5;
+}
+
+tbody tr:hover {
+    background-color: #34b43c;
+}
+
+.arrow-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.arrow-back a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #151111 ;
+}
+
+tr th.orden{
+    width: 10%;
+}
+
+tr th.fecha{
+    width: 5%;
+}
+
+tr th.destinatario{
+    width: 30%;
+}
+
+tr th.total{
+    width: 10%;
+}
+
+tr th.estado{
+    width: 20%;
+}
+
+tr th.mas{
+    width: 25%;
+}

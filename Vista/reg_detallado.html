@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style_reg_detallado.css">
+    <link rel="icon" href="Recursos_reg_log/hojita.png">
+    <title>Sign up</title>
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="arrow-back">
+                <a href="../Vista/reg_log.html" class="fa-solid fa-arrow-left"></a>
+            </div>
+            <div class="inner-box">
+                <div class="forms-wrap">
+                    <!-- Registrarse como cliente empresa -->
+                    <form action="#" autocomplete="off" class="sign-up-form" id="form_reg_cb">
+                        <div class="heading">
+                            <h2>Cliente Business</h2>
+                            <h6>¿Quieres registrarte?</h6>
+                            <a href="#" class="toggle">Registrarse como usuario web</a>
+                        </div>
+
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input type="text" class="input-field" id="nombre_cb" name="nombre_cb" autocapitalize="off">
+                                <label for="nombre_cb">Nombre</label>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="number" class="input-field" id="rut_cb" name="rut_cb" autocapitalize="off">
+                                <label for="rut_cb">Rut</label>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="number" class="input-field" id="ci_en_cb" name="ci_en_cb" autocapitalize="off">
+                                <label for="ci_en_cb">CI encargado</label>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="text" class="input-field" id="ubi_reg_cb" name="ubi_reg_cb" autocapitalize="off">
+                                <label for="ubi_reg_cb" class="data">Dirección</label>
+                            </div>
+
+                            <input type="submit" class="sign-btn" value="Registrarse">
+                            <p class="text">Al registrarme estoy de acuerdo con los
+                                <a href="#">Términos y condiciones</a> y <a href="#">Políticas de privacidad</a>
+                            </p>
+                        </div>
+                    </form>
+
+                    <!-- Registrarse como usuario web -->
+                    <form action="#" autocomplete="off" class="sign-in-form" id="form_reg_cn">
+                        <div class="heading">
+                            <h2>Registrarse</h2>
+                            <h6>¿Tienes una empresa?</h6>
+                            <a href="#" class="toggle">Registrarse como cliente business</a>
+                        </div>
+
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input type="text" class="input-field" id="nombre_cn" name="email_log" autocapitalize="off" minlength="4">
+                                <label for="nombre_cn">Nombre</label>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="number" class="input-field" id="ci_cn" name="ci_cn" autocapitalize="off">
+                                <label for="ci_cn">CI</label>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="text" class="input-field" id="ubi_reg_cn" name="ubi_reg_cn" autocapitalize="off">
+                                <label for="ubi_reg_cn" class="data">Dirección</label>
+                            </div>
+
+                            <input type="submit" class="sign-btn" value="Registrarse">
+                            <p class="text">Al registrarme estoy de acuerdo con los
+                                <a href="#">Términos y condiciones</a> y <a href="#">Políticas de privacidad</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Carousel -->
+                <div class="carousel">
+                    <center>
+                        <div class="input-wrap foto">
+                            <input type="file" id="file-input" accept="image/*">
+                            <label for="file-input" class="file-label">Subir Foto</label>
+                        </div>
+                        <div class="preview-container">
+                            <img id="preview-image" src="../Vista/Recursos_reg_log/perfil_defolt.jpeg" alt="Vista previa de la foto">
+                        </div>
+                    </center>
+
+                    <div class="actual-form">
+                        <div class="input-wrap">
+                            <input type="email" class="input-field" id="email_reg" name="email_reg" autocapitalize="off">
+                            <label for="email_reg" class="data">Correo electrónico</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input type="password" class="input-field" id="pass_reg" name="pass_reg" autocapitalize="off">
+                            <label for="pass_reg" class="data">Contraseña</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input type="number" class="input-field" id="cel_reg" name="cel_reg" autocapitalize="off">
+                            <label for="cel_reg" class="data">Cel</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../Controlador/val_reg_cliente.js"></script>
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/bf5cf6dca9.js" crossorigin="anonymous"></script>
+    <script src="Animations/trans_reg_detallado.js"></script>
+    <script src="https://kit.fontawesome.com/bf5cf6dca9.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs/build/css/themes/default.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs/build/alertify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/bf5cf6dca9.js" crossorigin="anonymous"></script>
+</body>
+</html>
